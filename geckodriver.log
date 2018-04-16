@@ -1,0 +1,24 @@
+1523829717924	geckodriver	INFO	geckodriver 0.19.1
+1523829717939	geckodriver	INFO	Listening on 127.0.0.1:58925
+1523829721139	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Lukasz\\AppData\\Local\\Temp\\rust_mozprofile.oufSv6sgAOGs"
+1523829722822	Marionette	INFO	Enabled via --marionette
+1523829726514	Marionette	INFO	Listening on port 58933
+1523829726996	Marionette	WARN	TLS certificate errors will be ignored for this session
+1523829739772	geckodriver	INFO	geckodriver 0.19.1
+1523829739788	geckodriver	INFO	Listening on 127.0.0.1:59021
+1523829742878	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Lukasz\\AppData\\Local\\Temp\\rust_mozprofile.KhwKjGU7VrYw"
+1523829743852	Marionette	INFO	Enabled via --marionette
+1523829746494	Marionette	INFO	Listening on port 59030
+1523829746582	Marionette	WARN	TLS certificate errors will be ignored for this session
+1523829761315	geckodriver	INFO	geckodriver 0.19.1
+1523829761330	geckodriver	INFO	Listening on 127.0.0.1:59123
+1523829764453	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Lukasz\\AppData\\Local\\Temp\\rust_mozprofile.zzSr7UOykYtD"
+1523829765390	Marionette	INFO	Enabled via --marionette
+1523829767890	Marionette	INFO	Listening on port 59131
+1523829768124	Marionette	WARN	TLS certificate errors will be ignored for this session
+1523829776168	geckodriver	INFO	geckodriver 0.19.1
+1523829776196	geckodriver	INFO	Listening on 127.0.0.1:59201
+1523829779234	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Lukasz\\AppData\\Local\\Temp\\rust_mozprofile.WTwaHQufPsFy"
+1523829780316	Marionette	INFO	Enabled via --marionette
+1523829783312	Marionette	INFO	Listening on port 59210
+1523829783488	Marionette	WARN	TLS certificate errors will be ignored for this session

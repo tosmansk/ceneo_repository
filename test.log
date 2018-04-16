@@ -1,0 +1,7 @@
+INFO            2018-04-16 00:02:11,121 test_ceneo_dyski LOGGED URL: https://www.ceneo.pl/ test_ceneo_dyski
+INFO            2018-04-16 00:02:15,994 test_ceneo_dyski LOGGED URL: https://www.ceneo.pl/Komputery
+INFO            2018-04-16 00:02:31,700 test_ceneo_komputery LOGGED URL: https://www.ceneo.pl/
+INFO            2018-04-16 00:02:36,455 test_ceneo_komputery LOGGED URL: https://www.ceneo.pl/Komputery
+INFO            2018-04-16 00:02:53,042 test_ceneo_login LOGGED URL: https://www.ceneo.pl/
+INFO            2018-04-16 00:03:06,824 test_ceneo_komputery LOGGED URL: https://www.ceneo.pl/
+INFO            2018-04-16 00:03:11,591 test_ceneo_komputery LOGGED URL: https://www.ceneo.pl/Komputery
