@@ -9,7 +9,7 @@ from CeneoPages.ceneo_pages import ChooseCategory
 class DyskiClick(unittest.TestCase):
 
     """
-
+    #
     This class tests ceneo login and click on dyski link
     It also clicks komputery & podzespoly komputerowe links
 
