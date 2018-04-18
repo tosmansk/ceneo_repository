@@ -1,3 +1,5 @@
+# -*- coding: utf8 -*-
+
 from page_objects import PageObject, PageElement
 from selenium.webdriver import ActionChains
 import time
