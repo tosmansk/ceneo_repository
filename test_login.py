@@ -4,7 +4,7 @@ from selenium import webdriver
 import unittest
 import logging
 
-from CeneoPages.ceneo_pages import ChooseCategory
+from ceneo_pages import ChooseCategory
 
 
 class CeneoLogin(unittest.TestCase):
