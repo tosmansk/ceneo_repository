@@ -1,3 +1,5 @@
+# -*- coding: utf8 -*-
+
 from selenium import webdriver
 import unittest
 import logging
