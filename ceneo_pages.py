@@ -86,11 +86,8 @@ class KomputeryPage(PageObject):
 
         def sprawdz_button(action):
 
+            time.sleep(3)
             if self.button_element.is_displayed():
-                action.click(self.button_element)
-                action.perform()
-            else:
-                WebDriverWait(self.w, 2).until(self.button_element.is_displayed())
                 action.click(self.button_element)
                 action.perform()
 

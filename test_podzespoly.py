@@ -3,6 +3,7 @@
 from selenium import webdriver
 import unittest
 import logging
+from selenium.webdriver import DesiredCapabilities
 from ceneo_pages import ChooseCategory
 
 
@@ -18,14 +19,24 @@ class KomputeryClick(unittest.TestCase):
 
         """
         This function is used to make initial setup for this taest case.
+
+        firefox = webdriver.Remote(
+          command_executor='http://localhost:4444/wd/hub',
+          desired_capabilities=DesiredCapabilities.FIREFOX)
+
+          https://github.com/SeleniumHQ/docker-selenium/wiki/Getting-Started-with-Hub-and-Nodes
         """
 
-        self.driver = webdriver.Firefox(executable_path=r'C:\Users\Lukasz\Desktop\Programowanie\geckodriver.exe')
+        self.driver = webdriver.Remote(command_executor='http://localhost:4444/wd/hub', \
+                                       desired_capabilities=DesiredCapabilities.FIREFOX)
+        #Crtl space space = podpowiada import
+        #self.driver = webdriver.Firefox(executable_path=r'C:\Users\Lukasz\Desktop\Programowanie\geckodriver.exe')
+
         logging_format = '%(levelname)-15s %(asctime)s %(funcName)s %(message)s'
         logging.basicConfig(filename='test.log', level=logging.INFO, format=logging_format)
         self.log = logging.getLogger(__name__)
 
-    def test_ceneo_komputery(self):
+    def test_ceneo_podzespoly(self):
 
         """
 

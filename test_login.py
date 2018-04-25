@@ -5,6 +5,7 @@ import unittest
 import logging
 
 from ceneo_pages import ChooseCategory
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 
 class CeneoLogin(unittest.TestCase):
@@ -21,7 +22,9 @@ class CeneoLogin(unittest.TestCase):
         This function is used to make initial setup for this taest case.
         """
 
-        self.driver = webdriver.Firefox(executable_path=r'C:\Users\Lukasz\Desktop\Programowanie\geckodriver.exe')
+        self.driver = webdriver.Remote(command_executor='http://localhost:4444/wd/hub', \
+                                       desired_capabilities=DesiredCapabilities.FIREFOX)
+        #self.driver = webdriver.Firefox(executable_path=r'C:\Users\Lukasz\Desktop\Programowanie\geckodriver.exe')
         logging_format = '%(levelname)-15s %(asctime)s %(funcName)s %(message)s'
         logging.basicConfig(filename='test.log', level=logging.INFO, format=logging_format)
         self.log = logging.getLogger(__name__)
