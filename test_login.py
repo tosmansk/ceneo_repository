@@ -22,7 +22,7 @@ class CeneoLogin(unittest.TestCase):
         This function is used to make initial setup for this taest case.
         """
 
-        self.driver = webdriver.Remote(command_executor='http://localhost:4444/wd/hub', \
+        self.driver = webdriver.Remote(command_executor='http://10.0.2.15:4444/wd/hub', \
                                        desired_capabilities=DesiredCapabilities.FIREFOX)
         #self.driver = webdriver.Firefox(executable_path=r'C:\Users\Lukasz\Desktop\Programowanie\geckodriver.exe')
         logging_format = '%(levelname)-15s %(asctime)s %(funcName)s %(message)s'
