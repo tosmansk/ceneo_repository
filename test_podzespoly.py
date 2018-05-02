@@ -27,10 +27,10 @@ class KomputeryClick(unittest.TestCase):
           https://github.com/SeleniumHQ/docker-selenium/wiki/Getting-Started-with-Hub-and-Nodes
         """
 
-        self.driver = webdriver.Remote(command_executor='http://10.0.2.15:4444/wd/hub', \
-                                       desired_capabilities=DesiredCapabilities.FIREFOX)
-        #Crtl space space = podpowiada import
-        #self.driver = webdriver.Firefox(executable_path=r'C:\Users\Lukasz\Desktop\Programowanie\geckodriver.exe')
+        with open('remote_server.cfg', 'r') as config:
+            uri = config.readline()
+
+        self.driver = webdriver.Remote(command_executor=uri, desired_capabilities=DesiredCapabilities.FIREFOX)
 
         logging_format = '%(levelname)-15s %(asctime)s %(funcName)s %(message)s'
         logging.basicConfig(filename='test.log', level=logging.INFO, format=logging_format)
