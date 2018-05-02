@@ -25,7 +25,7 @@ class CeneoLogin(unittest.TestCase):
         with open('remote_server.cfg', 'r') as config:
             uri = config.readline()
 
-        self.driver = webdriver.Remote(command_executor=uri, desired_capabilities=DesiredCapabilities.FIREFOX)
+        self.driver = webdriver.Remote(command_executor='http://10.0.2.15:4444/wd/hub', desired_capabilities=DesiredCapabilities.FIREFOX)
 
         logging_format = '%(levelname)-15s %(asctime)s %(funcName)s %(message)s'
         logging.basicConfig(filename='test.log', level=logging.INFO, format=logging_format)
