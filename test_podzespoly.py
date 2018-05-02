@@ -30,6 +30,7 @@ class KomputeryClick(unittest.TestCase):
         with open('remote_server.cfg', 'r') as config:
             uri = config.readline()
 
+        config.close()
 
         self.driver = webdriver.Remote(command_executor=uri, desired_capabilities=DesiredCapabilities.FIREFOX)
 
