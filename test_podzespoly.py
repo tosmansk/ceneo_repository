@@ -5,7 +5,7 @@ import unittest
 import logging
 from selenium.webdriver import DesiredCapabilities
 from ceneo_pages import ChooseCategory
-
+import configparser
 
 class KomputeryClick(unittest.TestCase):
 
@@ -18,20 +18,26 @@ class KomputeryClick(unittest.TestCase):
     def setUp(self):
 
         """
-        This function is used to make initial setup for this taest case.
+        This function is used to make initial setup for this test case.
 
         firefox = webdriver.Remote(
-          command_executor='http://localhost:4444/wd/hub',
-          desired_capabilities=DesiredCapabilities.FIREFOX)
+          command_executor='http://localhost:4444/wd/hub', desired_capabilities=DesiredCapabilities.FIREFOX)
 
-          https://github.com/SeleniumHQ/docker-selenium/wiki/Getting-Started-with-Hub-and-Nodes
+        The code to read IP config from the file
+        try:
+            with open('remote_server.cfg', 'r') as config:
+                uri = config.readline()
+        except FileNotFoundError:
+            print('The loaded config file doesn`t exist')
+
+        finally:
+            config.close()
         """
 
-        with open('remote_server.cfg', 'r') as config:
-            uri = config.readline()
-
-        config.close()
-
+        config = configparser.ConfigParser()
+        config.read('ipconfig.ini')
+        uri = config['Selenium']['url']
+        
         self.driver = webdriver.Remote(command_executor=uri, desired_capabilities=DesiredCapabilities.FIREFOX)
 
         logging_format = '%(levelname)-15s %(asctime)s %(funcName)s %(message)s'
@@ -41,10 +47,11 @@ class KomputeryClick(unittest.TestCase):
     def test_ceneo_podzespoly(self):
 
         """
-
         This page is to test login ceneo page
 
         """
+
+
 
         driver = self.driver
         ceneo_login = ChooseCategory(driver, root_uri=None)

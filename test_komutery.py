@@ -6,6 +6,7 @@ import logging
 import time
 from ceneo_pages import ChooseCategory
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+import configparser
 
 class KomputeryClick(unittest.TestCase):
 
@@ -20,9 +21,15 @@ class KomputeryClick(unittest.TestCase):
         """
         This function is used to make initial setup for this taest case.
         """
-
+        """
+        This reads IP config from the file:
         with open('remote_server.cfg', 'r') as config:
             uri = config.readline()
+        """
+
+        config = configparser.ConfigParser()
+        config.read('ipconfig.ini')
+        uri = config['Selenium']['url']
 
         self.driver = webdriver.Remote(command_executor=uri, desired_capabilities=DesiredCapabilities.FIREFOX)
         logging_format = '%(levelname)-15s %(asctime)s %(funcName)s %(message)s'
