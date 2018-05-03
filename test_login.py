@@ -3,10 +3,9 @@
 from selenium import webdriver
 import unittest
 import logging
-
 from ceneo_pages import ChooseCategory
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-
+import configparser
 
 class CeneoLogin(unittest.TestCase):
 
@@ -19,11 +18,18 @@ class CeneoLogin(unittest.TestCase):
     def setUp(self):
 
         """
-        This function is used to make initial setup for this taest case.
+        This function is used to make initial setup for this test case.
         """
 
+        """
+        This is part of the code which reads config file to obtain IP of remote server
         with open('remote_server.cfg', 'r') as config:
             uri = config.readline()
+        """
+
+        config = configparser.ConfigParser()
+        config.read('ipconfig.ini')
+        uri = config['Selenium']['url']
 
         self.driver = webdriver.Remote(command_executor=uri, desired_capabilities=DesiredCapabilities.FIREFOX)
 
