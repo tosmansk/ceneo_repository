@@ -5,7 +5,7 @@ import unittest
 import logging
 from ceneo_pages import ChooseCategory
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-import configparser
+import ConfigParser
 
 class CeneoLogin(unittest.TestCase):
 
@@ -27,7 +27,7 @@ class CeneoLogin(unittest.TestCase):
             uri = config.readline()
         """
 
-        config = configparser.ConfigParser()
+        config = ConfigParser.ConfigParser()
         config.read('ipconfig.ini')
         uri = config['Selenium']['url']
 
